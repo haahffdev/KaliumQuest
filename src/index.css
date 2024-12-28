@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
+  50% {
+    text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
+  50% {
+    box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-10px);
+    filter: brightness(1);
+  }
+  50% {
+    transform: translateY(0);
+    filter: brightness(1.5);
+  }
+  100% {
+    transform: translateY(-10px);
+    filter: brightness(1);
+  }
+}
+
+.neon-text {
+  animation: neonPulse 2s infinite;
+}
+
+.neon-border {
+  animation: borderGlow 3s infinite;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-title {
+  animation: titleAnimation 3s ease-in-out infinite;
+}
+
+.cyber-bg {
+  background-image: url('https://cdn.discordapp.com/attachments/833519788709904385/1322403605730430997/binary-code-pattern-background_1142-902.png?ex=6770bfd4&is=676f6e54&hm=e70e2ec0b44c78248420e919f5297baf81a7ddd966149d6b4ee663ef4cdbfb9d&');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
